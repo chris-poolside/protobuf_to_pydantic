@@ -121,9 +121,9 @@ class ProtobufCompatibleBaseModel(BaseModel):
         exclude: Optional[Any] = None,
         context: Optional[Dict[str, Any]] = None,
         by_alias: bool = False,
-        exclude_unset: bool = True,  # Changed default to True
-        exclude_defaults: bool = True,  # Changed default to True
-        exclude_none: bool = True,  # Changed default to True
+        exclude_unset: bool = False, # True will break Trajectory serialization  
+        exclude_defaults: bool = False,
+        exclude_none: bool = False, 
         round_trip: bool = False,
         warnings: bool = True,
         serialize_as_any: bool = False,
